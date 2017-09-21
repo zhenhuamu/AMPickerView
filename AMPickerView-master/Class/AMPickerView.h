@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class AMPickerView;
 
 @protocol AMPickerViewDelegate <NSObject>
 
@@ -15,12 +16,12 @@
 /**
  pickerView滑动回调
  */
-- (void)pickerView:(UIView *)amPickerView didSelectRow:(NSInteger)row;
+- (void)pickerView:(AMPickerView *)amPickerView didSelectRow:(NSInteger)row;
 
 /**
  pickerView当前选择元素 {index：选择位置  name：元素名称}
  */
-- (void)pickerView:(UIView *)amPickerView didSelectedItem:(NSDictionary *)selectedItem;
+- (void)pickerView:(AMPickerView *)amPickerView didSelectedItem:(NSDictionary *)selectedItem;
 
 @end
 
