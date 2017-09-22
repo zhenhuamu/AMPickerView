@@ -118,6 +118,7 @@ static NSString * const kIndex = @"index";
     labelItem.text =   _dataSource[row];
     labelItem.backgroundColor = [UIColor clearColor];
     labelItem.textAlignment = NSTextAlignmentCenter;
+    labelItem.adjustsFontSizeToFitWidth = YES;
     if (row == _selectIndex) {
         labelItem.textColor = _selectTextColor ?: [UIColor blackColor];
         labelItem.font = _selectTextFont ?: [UIFont boldSystemFontOfSize:25];
