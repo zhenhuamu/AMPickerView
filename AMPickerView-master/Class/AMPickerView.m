@@ -113,21 +113,24 @@ static NSString * const kIndex = @"index";
 }
 
 - (UIView *)customViewForRow:(NSInteger)row {
-    CGAffineTransform rotateItem = CGAffineTransformMakeRotation(M_PI/2);
-    UILabel *labelItem = [[UILabel alloc]init];
-    labelItem.text =   _dataSource[row];
-    labelItem.backgroundColor = [UIColor clearColor];
-    labelItem.textAlignment = NSTextAlignmentCenter;
-    labelItem.adjustsFontSizeToFitWidth = YES;
-    if (row == _selectIndex) {
-        labelItem.textColor = _selectTextColor ?: [UIColor blackColor];
-        labelItem.font = _selectTextFont ?: [UIFont boldSystemFontOfSize:25];
-    }else {
-        labelItem.textColor = _textColor ?: [UIColor grayColor];
-        labelItem.font = _textFont ?: [UIFont systemFontOfSize:20];
+    if (_dataSource.count > row) {
+        CGAffineTransform rotateItem = CGAffineTransformMakeRotation(M_PI/2);
+        UILabel *labelItem = [[UILabel alloc]init];
+        labelItem.text =   _dataSource[row];
+        labelItem.backgroundColor = [UIColor clearColor];
+        labelItem.textAlignment = NSTextAlignmentCenter;
+        labelItem.adjustsFontSizeToFitWidth = YES;
+        if (row == _selectIndex) {
+            labelItem.textColor = _selectTextColor ?: [UIColor blackColor];
+            labelItem.font = _selectTextFont ?: [UIFont boldSystemFontOfSize:25];
+        }else {
+            labelItem.textColor = _textColor ?: [UIColor grayColor];
+            labelItem.font = _textFont ?: [UIFont systemFontOfSize:20];
+        }
+        labelItem.transform = rotateItem;
+        return labelItem;
     }
-    labelItem.transform = rotateItem;
-    return labelItem;
+    return nil;
 }
 
 #pragma mark - UIPickerViewDataSource
