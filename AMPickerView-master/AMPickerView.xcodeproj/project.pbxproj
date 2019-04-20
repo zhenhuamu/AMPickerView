@@ -29,6 +29,7 @@
 		499A99141F651468008A5F10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		499A991C1F65147A008A5F10 /* AMPickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMPickerView.h; sourceTree = "<group>"; };
 		499A991D1F65147A008A5F10 /* AMPickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMPickerView.m; sourceTree = "<group>"; };
+		8E357789226AC5620058BB59 /* AMPickerView.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AMPickerView.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +63,7 @@
 		499A99041F651468008A5F10 /* AMPickerView */ = {
 			isa = PBXGroup;
 			children = (
+				8E357789226AC5620058BB59 /* AMPickerView.entitlements */,
 				499A99051F651468008A5F10 /* AppDelegate.h */,
 				499A99061F651468008A5F10 /* AppDelegate.m */,
 				499A99081F651468008A5F10 /* ViewController.h */,
@@ -116,6 +118,14 @@
 					499A99011F651468008A5F10 = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -292,12 +302,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AMPickerView/AMPickerView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W377U8DS28;
+				DEVELOPMENT_TEAM = YKV4N9L379;
 				INFOPLIST_FILE = AMPickerView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.andymu.AMPickerView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndyMu.AMPickerViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -307,12 +318,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = AMPickerView/AMPickerView.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = W377U8DS28;
+				DEVELOPMENT_TEAM = YKV4N9L379;
 				INFOPLIST_FILE = AMPickerView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.andymu.AMPickerView;
+				PRODUCT_BUNDLE_IDENTIFIER = com.AndyMu.AMPickerViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
